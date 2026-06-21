@@ -10,6 +10,7 @@ CHANNELS = [
     "https://t.me/s/FarazV2ray",
     "https://t.me/s/FreakConfig",
     "https://t.me/s/v2rayng_fast",
+    "https://t.me/s/chillguy_vpn",
     "https://t.me/s/mehrosaboran"
     
 ]
