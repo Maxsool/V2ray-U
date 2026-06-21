@@ -4,7 +4,9 @@ import json
 from bs4 import BeautifulSoup
 
 CHANNELS = [
-    "https://t.me/s/bigAVPN"
+    "https://t.me/s/bigAVPN",
+    "https://t.me/s/V2rayng_Fast",
+    "https://t.me/s/FarazV2ray",
     "https://t.me/s/FreakConfig",
     "https://t.me/s/v2rayng_fast",
     "https://t.me/s/mehrosaboran"
