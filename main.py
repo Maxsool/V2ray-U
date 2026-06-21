@@ -15,6 +15,7 @@ CHANNELS = [
     "https://t.me/s/configV2rayNG",
     "https://t.me/s/anotherme_night",
     "https://t.me/s/V2dogs_n",
+    "https://t.me/s/erfanandroid",
     "https://t.me/s/mehrosaboran"
     
 ]
