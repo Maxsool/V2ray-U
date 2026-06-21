@@ -4,17 +4,11 @@ import json
 from bs4 import BeautifulSoup
 
 CHANNELS = [
+    "https://t.me/s/bigAVPN"
     "https://t.me/s/FreakConfig",
-    "https://t.me/s/v2line",
-    "https://t.me/s/v2ray1_ng",
     "https://t.me/s/v2rayng_fast",
-    "https://t.me/s/PrivateVPNs",
-    "https://t.me/s/DirectVPN",
-    "https://t.me/s/vlesskeys",
-    "https://t.me/s/vpnfail_v2ray",
-    "https://t.me/s/vlessrus",
-    "https://t.me/s/ShadowSocks",
     "https://t.me/s/mehrosaboran"
+    
 ]
 
 PATTERN = r"(vless://[^\s]+)"
