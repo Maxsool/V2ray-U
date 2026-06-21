@@ -11,11 +11,12 @@ CHANNELS = [
 ]
 
 PATTERN = r"(vless://[^\s]+)"
+
 TAG = "🆔 @V2rayUBot @V2rayuir"
 
-headers = {"User-Agent": "Mozilla/5.0"}
-
 configs = set()
+
+headers = {"User-Agent": "Mozilla/5.0"}
 
 # ---------------- SCRAPE ----------------
 for url in CHANNELS:
@@ -26,10 +27,7 @@ for url in CHANNELS:
 
         found = re.findall(PATTERN, text)
 
-        # 🔥 فقط 5 تای آخر هر کانال
-        last_5 = found[-5:]
-
-        for c in last_5:
+        for c in found:
             configs.add(c)
 
     except Exception as e:
@@ -41,8 +39,24 @@ vless_list = sorted(list(configs))
 cleaned = []
 
 for c in vless_list:
-    base = c.split("#")[0]   # حذف fragment قبلی
-    final = base + "#" + TAG
+
+    # جدا کردن fragment از لینک
+    if "#" in c:
+        base, fragment = c.split("#", 1)
+
+        # 🔥 فقط حذف آخرین هشتگ داخل fragment
+        parts = fragment.split()
+
+        # اگر هشتگ کانال هست حذف کن (مثل @FreakConfig یا 🇸🇪@xxx)
+        filtered = [p for p in parts if not p.startswith("@") and "#" not in p]
+
+        # تگ ثابت ما
+        new_fragment = TAG
+
+        final = base + "#" + new_fragment
+    else:
+        final = c + "#" + TAG
+
     cleaned.append(final)
 
 # ---------------- SAVE TXT ----------------
