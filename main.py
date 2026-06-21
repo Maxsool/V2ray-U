@@ -13,6 +13,7 @@ CHANNELS = [
     "https://t.me/s/meliproxyy",
     "https://t.me/s/chillguy_vpn",
     "https://t.me/s/configV2rayNG",
+    "https://t.me/s/anotherme_night",
     "https://t.me/s/mehrosaboran"
     
 ]
