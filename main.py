@@ -6,17 +6,23 @@ from bs4 import BeautifulSoup
 CHANNELS = [
     "https://t.me/s/FreakConfig",
     "https://t.me/s/v2line",
+    "https://t.me/s/v2ray1_ng",
     "https://t.me/s/v2rayng_fast",
+    "https://t.me/s/PrivateVPNs",
+    "https://t.me/s/DirectVPN",
+    "https://t.me/s/vlesskeys",
+    "https://t.me/s/vpnfail_v2ray",
+    "https://t.me/s/vlessrus",
+    "https://t.me/s/ShadowSocks",
     "https://t.me/s/mehrosaboran"
 ]
 
 PATTERN = r"(vless://[^\s]+)"
-
 TAG = "🆔 @V2rayUBot @V2rayuir"
 
-configs = set()
-
 headers = {"User-Agent": "Mozilla/5.0"}
+
+configs = set()
 
 # ---------------- SCRAPE ----------------
 for url in CHANNELS:
@@ -27,7 +33,10 @@ for url in CHANNELS:
 
         found = re.findall(PATTERN, text)
 
-        for c in found:
+        # 🔥 فقط 5 تای آخر هر کانال
+        last_5 = found[-5:]
+
+        for c in last_5:
             configs.add(c)
 
     except Exception as e:
@@ -39,24 +48,8 @@ vless_list = sorted(list(configs))
 cleaned = []
 
 for c in vless_list:
-
-    # جدا کردن fragment از لینک
-    if "#" in c:
-        base, fragment = c.split("#", 1)
-
-        # 🔥 فقط حذف آخرین هشتگ داخل fragment
-        parts = fragment.split()
-
-        # اگر هشتگ کانال هست حذف کن (مثل @FreakConfig یا 🇸🇪@xxx)
-        filtered = [p for p in parts if not p.startswith("@") and "#" not in p]
-
-        # تگ ثابت ما
-        new_fragment = TAG
-
-        final = base + "#" + new_fragment
-    else:
-        final = c + "#" + TAG
-
+    base = c.split("#")[0]   # حذف fragment قبلی
+    final = base + "#" + TAG
     cleaned.append(final)
 
 # ---------------- SAVE TXT ----------------
