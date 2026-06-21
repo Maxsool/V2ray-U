@@ -19,7 +19,7 @@ CHANNELS = [
 
 pattern = r"(vless://[^\s]+)"
 
-vless_configs = set()
+all_configs = set()
 
 for url in CHANNELS:
     try:
@@ -27,25 +27,28 @@ for url in CHANNELS:
         soup = BeautifulSoup(r.text, "html.parser")
         text = soup.get_text("\n")
 
-        vless_configs.update(re.findall(pattern, text))
+        found = re.findall(pattern, text)
+
+        # 🔥 مهم: اینجا flatten و مستقیم اضافه کن
+        for f in found:
+            all_configs.add(f)
 
     except Exception as e:
         print("Error:", e)
 
-# مرتب + یکدست
-vless_configs = sorted(vless_configs)
+# 🔥 خیلی مهم: فقط یک لیست ساده
+vless_list = sorted(list(all_configs))
 
-# JSON استاندارد
+# 🔥 JSON تمیز و یک‌دست
 data = {
-    "count": len(vless_configs),
-    "vless": vless_configs
+    "count": len(vless_list),
+    "vless": vless_list
 }
 
 with open("vless.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-# TXT
 with open("vless.txt", "w", encoding="utf-8") as f:
-    f.write("\n".join(vless_configs))
+    f.write("\n".join(vless_list))
 
-print("Done:", len(vless_configs))
+print("DONE:", len(vless_list))
