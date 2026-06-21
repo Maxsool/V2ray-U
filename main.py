@@ -2,9 +2,7 @@ import requests
 import re
 import json
 from bs4 import BeautifulSoup
-from pathlib import Path
 
-# Telegram channels
 CHANNELS = [
     "https://t.me/s/FreakConfig",
     "https://t.me/s/v2line",
@@ -19,66 +17,35 @@ CHANNELS = [
     "https://t.me/s/mehrosaboran"
 ]
 
-# Save files next to this script
-BASE_DIR = Path(__file__).resolve().parent
-
-TXT_FILE = BASE_DIR / "vless.txt"
-JSON_FILE = BASE_DIR / "vless.json"
-
-# VLESS regex
-PATTERN = r"(vless://[^\s]+)"
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0"
-}
+pattern = r"(vless://[^\s]+)"
 
 vless_configs = set()
 
 for url in CHANNELS:
     try:
-        print(f"[+] Fetching: {url}")
-
-        response = requests.get(
-            url,
-            headers=HEADERS,
-            timeout=20
-        )
-        response.raise_for_status()
-
-        soup = BeautifulSoup(response.text, "html.parser")
+        r = requests.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+        soup = BeautifulSoup(r.text, "html.parser")
         text = soup.get_text("\n")
 
-        found = re.findall(PATTERN, text)
-
-        if found:
-            print(f"    Found {len(found)} VLESS configs")
-
-        vless_configs.update(found)
+        vless_configs.update(re.findall(pattern, text))
 
     except Exception as e:
-        print(f"[!] Error fetching {url}: {e}")
+        print("Error:", e)
 
-# Remove duplicates and sort
+# مرتب + یکدست
 vless_configs = sorted(vless_configs)
 
-# Save TXT
-with open(TXT_FILE, "w", encoding="utf-8") as f:
+# JSON استاندارد
+data = {
+    "count": len(vless_configs),
+    "vless": vless_configs
+}
+
+with open("vless.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+# TXT
+with open("vless.txt", "w", encoding="utf-8") as f:
     f.write("\n".join(vless_configs))
 
-# Save JSON
-with open(JSON_FILE, "w", encoding="utf-8") as f:
-    json.dump(
-        {
-            "count": len(vless_configs),
-            "vless": vless_configs
-        },
-        f,
-        ensure_ascii=False,
-        indent=2
-    )
-
-print("\n================================")
-print(f"Total unique VLESS configs: {len(vless_configs)}")
-print(f"TXT saved to : {TXT_FILE}")
-print(f"JSON saved to: {JSON_FILE}")
-print("Done.")
+print("Done:", len(vless_configs))
