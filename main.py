@@ -5,23 +5,27 @@ from bs4 import BeautifulSoup
 
 CHANNELS = [
     "https://t.me/s/FreakConfig",
+    "https://t.me/s/v2line",
+    "https://t.me/s/v2ray1_ng",
     "https://t.me/s/v2rayng_fast",
+    "https://t.me/s/PrivateVPNs",
+    "https://t.me/s/DirectVPN",
+    "https://t.me/s/vlesskeys",
+    "https://t.me/s/vpnfail_v2ray",
+    "https://t.me/s/vlessrus",
+    "https://t.me/s/ShadowSocks",
     "https://t.me/s/mehrosaboran"
-    "https://t.me/s/FarazV2ray"
 ]
 
 PATTERN = r"(vless://[^\s]+)"
 
-# 🔥 تگ دلخواه تو
 TAG = "🆔 @V2rayUBot @V2rayuir"
 
 configs = set()
 
-headers = {
-    "User-Agent": "Mozilla/5.0"
-}
+headers = {"User-Agent": "Mozilla/5.0"}
 
-# ------------------ SCRAPE ------------------
+# ---------------- SCRAPE ----------------
 for url in CHANNELS:
     try:
         r = requests.get(url, headers=headers, timeout=20)
@@ -33,28 +37,46 @@ for url in CHANNELS:
         for c in found:
             configs.add(c)
 
-        print(f"[+] {url} -> {len(found)}")
-
     except Exception as e:
-        print(f"[!] Error {url}: {e}")
+        print("Error:", e)
 
-# ------------------ CLEAN DATA ------------------
+# ---------------- CLEAN ----------------
 vless_list = sorted(list(configs))
 
-# ------------------ ADD TAG ------------------
-vless_tagged = [c + " " + TAG for c in vless_list]
+cleaned = []
 
-# ------------------ SAVE TXT ------------------
+for c in vless_list:
+
+    # جدا کردن fragment از لینک
+    if "#" in c:
+        base, fragment = c.split("#", 1)
+
+        # 🔥 فقط حذف آخرین هشتگ داخل fragment
+        parts = fragment.split()
+
+        # اگر هشتگ کانال هست حذف کن (مثل @FreakConfig یا 🇸🇪@xxx)
+        filtered = [p for p in parts if not p.startswith("@") and "#" not in p]
+
+        # تگ ثابت ما
+        new_fragment = TAG
+
+        final = base + "#" + new_fragment
+    else:
+        final = c + "#" + TAG
+
+    cleaned.append(final)
+
+# ---------------- SAVE TXT ----------------
 with open("vless.txt", "w", encoding="utf-8") as f:
-    f.write("\n".join(vless_tagged))
+    f.write("\n".join(cleaned))
 
-# ------------------ SAVE JSON ------------------
+# ---------------- SAVE JSON ----------------
 data = {
-    "count": len(vless_list),
-    "vless": vless_tagged
+    "count": len(cleaned),
+    "vless": cleaned
 }
 
 with open("vless.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("DONE:", len(vless_list))
+print("DONE:", len(cleaned))
