@@ -10,38 +10,51 @@ CHANNELS = [
     "https://t.me/s/FarazV2ray"
 ]
 
-pattern = r"(vless://[^\s]+)"
+PATTERN = r"(vless://[^\s]+)"
 
-all_configs = set()
+# 🔥 تگ دلخواه تو
+TAG = "🆔 @V2rayUBot @V2rayuir"
 
+configs = set()
+
+headers = {
+    "User-Agent": "Mozilla/5.0"
+}
+
+# ------------------ SCRAPE ------------------
 for url in CHANNELS:
     try:
-        r = requests.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+        r = requests.get(url, headers=headers, timeout=20)
         soup = BeautifulSoup(r.text, "html.parser")
         text = soup.get_text("\n")
 
-        found = re.findall(pattern, text)
+        found = re.findall(PATTERN, text)
 
-        # 🔥 مهم: اینجا flatten و مستقیم اضافه کن
-        for f in found:
-            all_configs.add(f)
+        for c in found:
+            configs.add(c)
+
+        print(f"[+] {url} -> {len(found)}")
 
     except Exception as e:
-        print("Error:", e)
+        print(f"[!] Error {url}: {e}")
 
-# 🔥 خیلی مهم: فقط یک لیست ساده
-vless_list = sorted(list(all_configs))
+# ------------------ CLEAN DATA ------------------
+vless_list = sorted(list(configs))
 
-# 🔥 JSON تمیز و یک‌دست
+# ------------------ ADD TAG ------------------
+vless_tagged = [c + " " + TAG for c in vless_list]
+
+# ------------------ SAVE TXT ------------------
+with open("vless.txt", "w", encoding="utf-8") as f:
+    f.write("\n".join(vless_tagged))
+
+# ------------------ SAVE JSON ------------------
 data = {
     "count": len(vless_list),
-    "vless": vless_list
+    "vless": vless_tagged
 }
 
 with open("vless.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
-
-with open("vless.txt", "w", encoding="utf-8") as f:
-    f.write("\n".join(vless_list))
 
 print("DONE:", len(vless_list))
