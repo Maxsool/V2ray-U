@@ -7,6 +7,7 @@ CHANNELS = [
     "https://t.me/s/bigAVPN",
     "https://t.me/s/nitruStore",
     "https://t.me/s/v2rayngvpn",
+    "https://t.me/s/vistav2ray",
     "https://t.me/s/mtmvpn",
     "https://t.me/s/V2rayng_Fast",
     "https://t.me/s/FarazV2ray",
