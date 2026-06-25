@@ -7,6 +7,7 @@ CHANNELS = [
     "https://t.me/s/bigAVPN",
     "https://t.me/s/oneclickvpnkeys",
     "https://t.me/s/nitruStore",
+    "https://t.me/s/appsooner",
     "https://t.me/s/v2rayngvpn",
     "https://t.me/s/vistav2ray",
     "https://t.me/s/mtmvpn",
