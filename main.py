@@ -27,6 +27,7 @@ CHANNELS = [
     "https://t.me/s/filembad",
     "https://t.me/s/mehrosaboran"
     "https://t.me/s/AR14N24B",
+    "https://t.me/s/ShadowProxy66",
     "https://t.me/s/V2dogs_n"
     
 ]
