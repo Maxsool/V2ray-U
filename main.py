@@ -48,7 +48,7 @@ for url in CHANNELS:
         found = re.findall(PATTERN, text)
 
         # 🔥 فقط 5 تای آخر هر کانال
-        last_5 = found[-5:]
+        last_5 = found[-3:]
 
         for c in last_5:
             configs.add(c)
