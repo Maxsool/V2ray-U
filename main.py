@@ -50,7 +50,8 @@ CHANNELS = [
 ]
 
 PATTERN = r"(vless://[^\s]+)"
-TAG = "🆔 @V2rayUBot @V2rayuir"
+#TAG = "🆔 @V2rayUBot @V2rayuir"
+TAG = "🆔 @V2rayuir"
 
 headers = {"User-Agent": "Mozilla/5.0"}
 
