@@ -18,7 +18,7 @@ CHANNELS = [
 "https://t.me/s/vlesskeys",
 "https://t.me/s/vpnfail_v2ray",
 "https://t.me/s/vlessrus",
-"https://t.me/s/V2rayNG3",
+//"https://t.me/s/V2rayNG3",
 "https://t.me/s/ShadowsocksM",
 "https://t.me/s/ShadowSocks",
 "https://t.me/s/mehrosaboran",
@@ -28,13 +28,13 @@ CHANNELS = [
 "https://t.me/s/ShadowProxy66",
 "https://t.me/s/V2dogs_n"
 "https://t.me/s/bigAVPN",
-"https://t.me/s/nitruStore",
+#"https://t.me/s/nitruStore",
 "https://t.me/s/freenettir",
 "https://t.me/s/V2All",
 "https://t.me/s/appsooner",
 "https://t.me/s/v2rayngvpn",
 "https://t.me/s/vistav2ray",
-"https://t.me/s/mtmvpn",
+#"https://t.me/s/mtmvpn",
 "https://t.me/s/V2rayng_Fast",
 "https://t.me/s/meliproxyy",
 "https://t.me/s/chillguy_vpn",
@@ -46,7 +46,7 @@ CHANNELS = [
 "https://t.me/s/bored_vpn",
 "https://t.me/s/Daily_Configs",
 "https://t.me/s/Alpha_V2rayip",
-"https://t.me/s/Express_freevpn",
+#"https://t.me/s/Express_freevpn",
 ]
 
 PATTERN = r"(vless://[^\s]+)"
