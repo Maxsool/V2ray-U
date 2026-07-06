@@ -18,7 +18,7 @@ CHANNELS = [
 "https://t.me/s/vlesskeys",
 "https://t.me/s/vpnfail_v2ray",
 "https://t.me/s/vlessrus",
-//"https://t.me/s/V2rayNG3",
+"https://t.me/s/V2rayNG3",
 "https://t.me/s/ShadowsocksM",
 "https://t.me/s/ShadowSocks",
 "https://t.me/s/mehrosaboran",
