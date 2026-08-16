@@ -1,7 +1,6 @@
 vless://01f441ab-00e1-4865-90ca-6b2eff143506@68.183.41.47:36180?encryption=none&security=none&type=tcp&headerType=http&host=store.steampowered.com#🆔 @V2rayuir
-vless://03979e92-587d-479d-848e-f952a8821bd0@172.67.210.83:2087?mode=auto&path=%2F&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&extra=%7B%22xPaddingBytes%22%3A%22100-1000%22%7D&insecure=0&host=fl2.wargen-alkaline.ir&fp=chrome&type=xhttp&allowInsecure=0&sni=fl2.wargen-alkaline.ir#🆔 @V2rayuir
 vless://04cb9c0f-363c-4bf8-a195-2cb8bd43b02a@o.server5peekconfig.workers.dev:443?security=tls&type=ws&path=%2FeyJqdW5rIjoiSU9LdXp3R1p6IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19%3Fed%3D2560&host=o.server5peekconfig.workers.dev&packetEncoding=xudp&alpn=http%2F1.1&sni=O.seRVer5peEKCOnFIG.WOrKers.dEV&fp=chrome&encryption=none#🆔 @V2rayuir
-vless://05caca6c-9e97-4c0f-8edf-7b88a6e572c5@mypanel.unixzone.us:12068?path=%2F&security=&encryption=none&type=ws#🆔 @V2rayuir
+vless://05cf7b0e-ad1a-42bb-80e7-73ae45b1019a@188.114.97.6:8443?encryption=none&security=tls&sni=france.io-com-de-dev.org&ech=encryptedsni.com%2Budp%3A%2F%2F8.8.8.8&type=ws&host=france.io-com-de-dev.org&path=%2Fapi%2Fvoip%2Fupdates%2Fstatic%2Fx9i2#🆔 @V2rayuir
 vless://05cf7b0e-ad1a-42bb-80e7-73ae45b1019a@188.114.97.6:8443?encryption=none&security=tls&sni=france.io-com-de-dev.org&ech=encryptedsni.com%2Budp%3A%2F%2F8.8.8.8&type=ws&host=france.io-com-de-dev.org&path=%2Fapi%2Fvoip%2Fupdates%2Fstatic%2Fx9i2#🆔 @V2rayuir
 vless://060a8fe8-7175-4ded-94a5-d9808bc645b6@104.18.35.85:443?path=%2F%3FTELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D512&security=tls&encryption=none&insecure=0&host=cf.vless.sandesh.fr&fp=chrome&type=ws&allowInsecure=0&sni=cf.vless.sandesh.fr#🆔 @V2rayuir
 vless://0deb6f9d-9ad9-4b73-ac33-f3176e7ec1f2@91.242.241.45:8443?security=reality&fp=chrome&type=tcp&flow=xtls-rprx-vision&pbk=1-2fy8f8XeOHzmdFmCENHV1mr_tzJX1M9UXp42mUIiM&sni=google.com#🆔 @V2rayuir
@@ -22,10 +21,12 @@ vless://42343aa0-0a66-4424-e845-c124b6bf84eb@s3.zynetraq.ir:2087?alpn=h2%2Chttp%
 vless://45172ad2-bfb4-4403-a525-2b60b4e75985@185.126.236.181:2053?path=%2F&security=none&encryption=none&host=www.icloud.com&type=ws#🆔 @V2rayuir
 vless://45172ad2-bfb4-4403-a525-2b60b4e75985@185.126.236.181:2053?path=%2F&security=none&encryption=none&host=www.icloud.com&type=ws#🆔 @V2rayuir
 vless://46102c9e-441e-49b6-9ab6-9de2b585b202@193.181.29.146:443?security=reality&encryption=none&pbk=TK_buEqf86vPwxx15k8BYC2Ln7nkywSQYdLCqDk2KFI&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=www.amd.com&sid=bc29bbdf41ce2bea#🆔 @V2rayuir
+vless://4d7d1add-0a51-4887-b10a-07c68df24f7e@sosk.sorix-home.ir:60231?security=&encryption=none&headerType=http&type=tcp#🆔 @V2rayuir
 vless://5aafc2be-9348-4dec-b896-f4a91253bbca@202.37.33.80:443?path=%2Fid-tksi%3Fed%3D2048&security=tls&encryption=none&insecure=0&host=support.zoom.us.yxls.eu.cc&ech=encryptedsni.com%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=support.zoom.us.yxls.eu.cc#🆔 @V2rayuir
 vless://5aafc2be-9348-4dec-b896-f4a91253bbca@202.37.33.80:443?path=%2Fid-tksi%3Fed%3D2048&security=tls&encryption=none&insecure=0&host=support.zoom.us.yxls.eu.cc&ech=encryptedsni.com%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=support.zoom.us.yxls.eu.cc#🆔 @V2rayuir
 vless://6202b230-417c-4d8e-b624-0f71afa9c75d@198.71.232.30:8880?security=none&type=ws&path=%2F&host=vms.lifetime07.workers.dev&packetEncoding=xudp&encryption=none#🆔 @V2rayuir
 vless://645db8a7-8049-408d-8e61-ae3a67a324a0@154.17.0.91:50159?encryption=none&flow=xtls-rprx-vision&fp=&pbk=qGUBbKjlanqEx7El13jH_mBmDWHZ1a-PmxnwETB-9lM&security=reality&sid=2bad4cafb9965963&sni=www.cloudflare.com&type=tcp#🆔 @V2rayuir
+vless://64a28ed6-2238-42d9-8452-b83674f741e5@141.193.213.30:2053?security=tls&type=ws&headerType=&path=%2F%3Fed%3D2053&host=sunny-comet-55.curiocar.com&sni=sunny-comet-55.curiocar.com&fp=edge&alpn=h2%2Chttp%2F1.1&allowInsecure=1#🆔 @V2rayuir
 vless://79c9514e-aa3c-4cd0-bf0d-dd6df42039f6@151.101.56.6:443?path=%2F&security=tls&alpn=h2&encryption=none&host=c12.com&fp=firefox&type=ws&sni=ssl.fastly.com#🆔 @V2rayuir
 vless://79c9514e-aa3c-4cd0-bf0d-dd6df42039f6@k2.cloud--vpn.site:443?path=%2F&security=tls&alpn=h2&encryption=none&host=c12.com&fp=firefox&type=ws&sni=ssl.fastly.com#🆔 @V2rayuir
 vless://79dafc6f-e61b-46cf-8a3c-74f6304d230c@freesocks.work:2083?path=%2F&security=tls&alpn=h2&encryption=none&host=uwu.meowpew.de5.net&fp=chrome&type=ws&sni=uwu.meowpew.de5.net#🆔 @V2rayuir
@@ -49,8 +50,6 @@ vless://ab16b404-1d3a-4ba6-a37c-67bed61e3b5d@93.123.13.7:15139?security=none&enc
 vless://ae83f4a6-7fd3-4168-9f42-1260fc601155@104.16.106.213:8880?security=none&type=ws&path=%2Fpyip%3DProxyIP.JP.CMLiussss.net&host=shy-mud-e936.15-bb9.workers.dev&packetEncoding=xudp&encryption=none#🆔 @V2rayuir
 vless://af6904c1-4349-4448-8e99-0024824a0c33@140.245.50.174:10000?security=reality&type=raw&packetEncoding=xudp&sni=gateway.icloud.com&fp=chrome&flow=xtls-rprx-vision&sid=3b0b73e5&pbk=xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU&encryption=none#🆔 @V2rayuir
 vless://af6904c1-4349-4448-8e99-0024824a0c33@sgxi.959555.xyz:10000?security=reality&type=raw&packetEncoding=xudp&sni=gateway.icloud.com&fp=chrome&flow=xtls-rprx-vision&sid=3b0b73e5&pbk=xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU&encryption=none#🆔 @V2rayuir
-vless://afcac633-0e1a-46c3-bef2-cc01cc0097c8@85.234.114.53:22231?security=tls&encryption=none&insecure=0&headerType=none&fp=chrome&type=tcp&allowInsecure=0&flow=xtls-rprx-vision&sni=r1.mizulina.top#🆔 @V2rayuir
-vless://b8794f67-80d9-4124-8fc5-2d2ce5516573@50.7.41.142:443?security=reality&type=tcp&packetEncoding=xudp&sni=deepl.com&fp=chrome&flow=xtls-rprx-vision&sid=bd72&pbk=AYL1z7PNyo6LqYLeZpXa50FnK9eEu7o18KHRhOlST1w&encryption=none#🆔 @V2rayuir
 vless://b9ab32b7-a5f3-43b2-9f3a-9544b50f96b1@www.speedtest.net:443?path=%2FeyJqdW5rIjoiVkdwcUs5OElBaGsiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=bpb-df66c5a8.yfjhkjl.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=BPb-dF66c5a8.yfjhKjl.WorKERS.dEv#🆔 @V2rayuir
 vless://ba2ac75f-0a9b-4483-9155-c00c8814d7c9@103.253.43.210:8443?security=reality&fp=chrome&type=tcp&flow=xtls-rprx-vision&pbk=5hKDqL2dBu7jbCfC_xW5omNEGUzPme8qF4mJOrXuHGY&sni=google.com#🆔 @V2rayuir
 vless://bc527d04-6272-41d0-8c48-aa0e83638c94@164.90.165.38:46569?security=none&encryption=none&headerType=none&type=tcp#🆔 @V2rayuir
@@ -66,8 +65,8 @@ vless://e4514801-0d5a-42ba-869f-39bd605aef9e@15.224.75.217:22222?encryption=none
 vless://e4514801-0d5a-42ba-869f-39bd605aef9e@15.224.75.217:22223?encryption=none&security=none&type=tcp#🆔 @V2rayuir
 vless://e4514801-0d5a-42ba-869f-39bd605aef9e@3.74.196.166:22222?encryption=none&security=none&type=tcp#🆔 @V2rayuir
 vless://e4514801-0d5a-42ba-869f-39bd605aef9e@3.74.196.166:22223?encryption=none&security=none&type=tcp#🆔 @V2rayuir
+vless://e4514801-0d5a-42ba-869f-39bd605aef9e@3.78.155.1:22224?security=&encryption=none&headerType=none&type=tcp#🆔 @V2rayuir
 vless://e586c19d-2f64-4a11-8f13-a21186ce6cca@157.22.176.96:3001?security=reality&encryption=none&pbk=0wHK7-VJ5ich3gTaQbBhMyyEtXpNGmVNskbIsnLBTQ8&headerType=none&fp=chrome&type=tcp&sni=www.google.com&sid=0000008795147229#🆔 @V2rayuir
-vless://e9adbac6-90e1-4c1f-ad17-46226d45a262@85.133.221.48:5001?security=&encryption=none&headerType=none&type=tcp#🆔 @V2rayuir
 vless://f9c6ae5c-a537-4ce1-8ad5-d1e579e0275f@209.200.246.86:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=ECtV4BdcZKXG49uHtDX-71e1YVr7gu54ykbaBms9kh4&security=reality&sid=c2f3117b3268d0a6&sni=www.cloudflare.com&type=tcp#🆔 @V2rayuir
 vless://f9f8e019-7d71-4aee-8ea3-20e8dba4f4b8@31.57.158.25:21854?encryption=none&type=tcp&security=none&headerType=none#🆔 @V2rayuir
 vless://fb1572c8-96c2-4485-9946-4f83b82bd350@185.143.233.5:2095?path=%2F&security=none&encryption=none&host=pwa.videocloudme.ir&type=ws#🆔 @V2rayuir
